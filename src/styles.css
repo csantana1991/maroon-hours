@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Source+Sans+3:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f4efe6;
+  --color-surface: #fffaf4;
+  --color-ink: #1c1412;
+  --color-muted: #6d625c;
+  --color-maroon: #500000;
+  --color-brass: #8c6a2f;
+  --color-line: #e3d8cb;
+  --font-sans: "Source Sans 3", "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: "Newsreader", Georgia, "Iowan Old Style", serif;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-ink);
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: #500000;
+    color: #f4efe6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
